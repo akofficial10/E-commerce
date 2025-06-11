@@ -7,7 +7,7 @@ export const ShopContext = createContext();
 const ShopContextProvider = ({ children }) => {
   const [search, setSearch] = useState("");
   const backendUrl =
-    import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+    import.meta.env.VITE_BACKEND_URL || "https://e-commerce-sy1q.onrender.com";
   const [showSearch, setShowSearch] = useState(false);
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [products, setProducts] = useState([]);
