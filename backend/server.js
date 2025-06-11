@@ -29,24 +29,31 @@ connectClodinary();
 
 // CORS configuration
 
-const allowedOrigins = ["https://e-commerce-1-5lp9.onrender.com", "https://e-commerce-2-oajk.onrender.com"];
+// Update your CORS middleware to this:
+const allowedOrigins = [
+  "https://e-commerce-1-5lp9.onrender.com",
+  "https://e-commerce-2-oajk.onrender.com",
+  "http://localhost:3000" // Add this for local development
+];
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: allowedOrigins,
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Add OPTIONS
+    allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
 
-
-
+// Handle preflight requests
+app.options("*", cors());
 app.use(express.json());
+
+// Add this route before other routes
+app.get("*.css", (req, res, next) => {
+  res.setHeader("Content-Type", "text/css");
+  next();
+});
 
 // Routes
 app.use("/api/user", userRouter);
