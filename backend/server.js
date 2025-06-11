@@ -33,10 +33,17 @@ const allowedOrigins = ["https://e-commerce-1-5lp9.onrender.com/", "https://e-co
 
 app.use(
   cors({
-    origin: allowedOrigins,
-    credentials: true, 
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
+
 
 
 app.use(express.json());
