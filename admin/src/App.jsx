@@ -11,7 +11,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
-export const backendUrl = import.meta.env.VITE_BACKEND_URL;
+export const backendUrl =  import.meta.env.VITE_BACKEND_URL || "https://e-commerce-sy1q.onrender.com";
 export const currency = "₹";
 
 const App = () => {
