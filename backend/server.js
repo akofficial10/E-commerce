@@ -33,7 +33,7 @@ connectClodinary();
 const allowedOrigins = [
   "https://e-commerce-1-5lp9.onrender.com",
   "https://e-commerce-2-oajk.onrender.com",
-  "http://localhost:3000" // Add this for local development
+  "http://localhost:4000"
 ];
 
 app.use(
