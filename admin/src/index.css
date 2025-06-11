@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@500&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,500;1,500&family=Prata&display=swap');
+
+@import "tailwindcss";
+
+a.active hr{
+    display: block;
+}
+
+a.active{
+  background-color: #17c507;
+  border-color: green;
+}
+
+*{
+    font-family: Outfit;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width:640px) {
+  a.active{
+    background-color: black;
+    color: white;
+  }
+}
+
+select, input, textarea{
+  border: 1px solid #000000;
+  outline-color: #17c507 ;
+  border-radius: 4px;
+}
+
+  
