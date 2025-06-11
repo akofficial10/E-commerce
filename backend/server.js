@@ -29,7 +29,7 @@ connectClodinary();
 
 // CORS configuration
 
-const allowedOrigins = ["http://localhost:5173", "http://localhost:5174"];
+const allowedOrigins = ["https://e-commerce-1-5lp9.onrender.com/", "https://e-commerce-2-oajk.onrender.com/"];
 
 app.use(
   cors({
