@@ -29,15 +29,12 @@ const Home = () => {
     <div className="min-h-screen">
       <Hero />
       <LatestCollection />
-      <ProductShow />
-
       <Stat />
+      <ProductShow />
       <Video />
-
       <Blog />
       <OurPolicy />
       <Testimonial />
-
       <NewsLetterBox />
     </div>
   );
