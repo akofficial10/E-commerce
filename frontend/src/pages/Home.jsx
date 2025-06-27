@@ -31,7 +31,7 @@ const Home = () => {
       <LatestCollection />
       <ProductShow />
 
-      {/* <Stat /> */}
+      <Stat />
       <Video />
 
       <Blog />
